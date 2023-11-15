@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 // import "./App.css";
 import "./index.css";
+import { DashboardPage, LoginPage } from "./pages";
+import AppLayout from "./layouts/AppLayout";
 
 
 
@@ -15,7 +17,17 @@ function App() {
     createRoutesFromElements(
       <Route>
 
-  
+        <Route
+          path="/"
+          element={<LoginPage />}
+
+          />
+
+        <Route
+          path="/dashboard/"
+          element={<AppLayout> <DashboardPage /> </AppLayout>}
+
+          />
 
       </Route>
 
