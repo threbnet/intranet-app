@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate  } from 'react-router-dom';
-import bg from '../../assets/bg.mp4'
+// import bg from '../../assets/bg.mp4'
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -25,7 +25,7 @@ const LoginPage = () => {
   };
   return (
     <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-8 lg:px-8">
-      <video autoPlay loop muted src={bg}  className='-z-10 absolute w-full h-full object-cover object-center'/>
+      <video autoPlay loop muted src="https://cdn.dribbble.com/uploads/48226/original/b8bd4e4273cceae2889d9d259b04f732.mp4?1689028949"  className='-z-10 absolute w-full h-full object-cover object-center'/>
       <div className="max-w-md w-full px-8 space-y-8 rounded-lg border-2 bg-[#2d2b2b] bg-opacity-75 pb-6">
         <div>
           <h2 className="mt-6 text-center text-3xl font-bold text-gray-100">
