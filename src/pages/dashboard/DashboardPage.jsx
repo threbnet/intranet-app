@@ -1,5 +1,10 @@
 import { useEffect } from "react";
 import React from 'react';
+import SummaryDataCard from "./components/SummaryDataCard";
+import ProfileCard from "./components/ProfileCard";
+import LeaderboardCard from "./components/LeaderboardCard";
+import ForumActivityCard from "./components/ForumActivityCard";
+import EventsCard from "./components/EventsCard";
 
 const DashboardPage = () => {
     useEffect(() => {
@@ -59,6 +64,16 @@ const DashboardPage = () => {
     return (
         <div className="text-white">
             <h2 className="text-2xl ">Dashboard</h2>
+            <div className="mt-4 w-full grid grid-cols-3 gap-4 ">
+                <div>
+                <ProfileCard />
+                <ForumActivityCard />
+                </div>
+                <div className="col-span-2 ">
+                <LeaderboardCard />
+                <EventsCard />
+                </div>
+            </div>
         </div>
     )
 }
