@@ -93,7 +93,7 @@ const ProfileCard = () => {
     desc: 'Very resource individual, be it tools, people, systems, knowledge. Always have something to offer.'
 }]
     return(
-        <div className="rounded-lg border-2 p-3">
+        <div className="rounded-lg border-2 p-3 w-full">
              <div className='w-full'>
             <h2 className='font-bold text-xl mb-4 inline'>Profile</h2>
             <div className='float-right'>

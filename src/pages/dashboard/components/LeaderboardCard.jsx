@@ -31,7 +31,7 @@ const LeaderboardCard = () => {
                 </select>
             </div>
             </div>
-            <table className='w-full'>
+            <table className='w-full overflow-x-scroll'>
                 <th>#</th>
                 <th>User</th>
                 <th>Rank</th>

@@ -10,7 +10,7 @@ const TopNavbar = () => {
         setShowaccount(false);
     }
     return (
-        <div className="py-2 w-full fixed z-10 border-b-2 mb-4 bg-opacity-100 bg-[#2d2b2b]">
+        <div className="py-2 w-full fixed z-10 border-b-2 mb-4 bg-opacity-100 bg-[#08081c]">
             <div className="w-full px-3">
                 <div className="float-left flex gap-3">
                     {/* logo goes here */}

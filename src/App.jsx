@@ -7,8 +7,9 @@ import {
 } from "react-router-dom";
 // import "./App.css";
 import "./index.css";
-import { DashboardPage, LoginPage } from "./pages";
+import { DashboardPage, DojoPage, LoginPage } from "./pages";
 import AppLayout from "./layouts/AppLayout";
+
 
 
 
@@ -26,6 +27,12 @@ function App() {
         <Route
           path="/dashboard/"
           element={<AppLayout> <DashboardPage /> </AppLayout>}
+
+          />
+
+<Route
+          path="/dojo/"
+          element={<AppLayout> <DojoPage /> </AppLayout>}
 
           />
 

@@ -5,11 +5,14 @@ import { Menus } from "./MenuData";
 const MenuItem = ({item}) => {
     return (
        
-            <li className="group px-6 flex gap-3 py-2 mt-2 capitalize hover:bg-white hover:text-black"><span className="group-hover:animate-bounce">{item.icon}</span> {item.title} {item.count}</li>
+       <>
+         <Link to={item.path}><li className="group px-6 flex gap-3 py-2 mt-2 capitalize hover:bg-white hover:text-black"><span className="group-hover:animate-bounce">{item.icon}</span> <span className="hidden lg:block">{item.title} {item.count}</span></li></Link>
+       </>
         
     )
 }
 import logo from '../../assets/logo.png'
+import { Link } from "react-router-dom";
 const SideNavbar = () => {
 
     const [menuData, setMenuData ] = useState(Menus);
