@@ -64,12 +64,12 @@ const DashboardPage = () => {
     return (
         <div className="text-white">
             <h2 className="text-2xl ">Dashboard</h2>
-            <div className="mt-4 w-full grid grid-cols-1 lg:grid-cols-3 lg:gap-4 ">
-                <div className="w-full">
+            <div className="mt-4 w-full grid grid-cols-2 lg:grid-cols-5 lg:gap-4 ">
+                <div className="w-full col-span-2">
                 <ProfileCard />
                 <ForumActivityCard />
                 </div>
-                <div className="col-span-2 ">
+                <div className="col-span-3 ">
                 <LeaderboardCard />
                 <EventsCard />
                 </div>

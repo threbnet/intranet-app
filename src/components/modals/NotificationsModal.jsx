@@ -2,7 +2,7 @@
 
 const NotificationsModal = ({handleNotificationModal}) => {
     return(
-        <div className="absolute my-12 bg-black text-white -mx-40 rounded-xl p-2 border-2 w-64 h-64">
+        <div className="absolute my-2 bg-black text-white -mx-64 rounded-xl p-2 border-2 w-64 h-64">
             <div className="w-full p-2 flex">
                 <button className="" type="button" onClick={()=>handleNotificationModal()}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 font-bold h-6">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import NotificationsModal from "./NotificationsModal";
+import { Link } from "react-router-dom";
 
 
 const AccountModal = ({image, handleAccountModal}) => {
@@ -18,7 +19,7 @@ const AccountModal = ({image, handleAccountModal}) => {
 
         {
             accountModalActive && (
-                <div className='absolute my-12 bg-black text-white -mx-40 rounded-xl p-2 w-64 border-2'>
+                <div className='absolute my-2 bg-black text-white -mx-64 rounded-xl p-2 w-64 border-2'>
         <div className='w-full py-2 px-4 flex gap-3 '>
             <img src={image} className="rounded-full w-10 h-10" />
             <div className=''>
@@ -27,7 +28,7 @@ const AccountModal = ({image, handleAccountModal}) => {
             </div>
 
         </div>
-        <div onClick={handleNotificationModal}  className='w-full hover:bg-white hover:text-gray-800 px-4 py-2'>
+        <div onClick={handleNotificationModal}  className='w-full hover:bg-white hover:text-gray-800 px-4 py-2 '>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 inline mr-2">
                 <path fillRule="evenodd" d="M6.912 3a3 3 0 00-2.868 2.118l-2.411 7.838a3 3 0 00-.133.882V18a3 3 0 003 3h15a3 3 0 003-3v-4.162c0-.299-.045-.596-.133-.882l-2.412-7.838A3 3 0 0017.088 3H6.912zm13.823 9.75l-2.213-7.191A1.5 1.5 0 0017.088 4.5H6.912a1.5 1.5 0 00-1.434 1.059L3.265 12.75H6.11a3 3 0 012.684 1.658l.256.513a1.5 1.5 0 001.342.829h3.218a1.5 1.5 0 001.342-.83l.256-.512a3 3 0 012.684-1.658h2.844z" clipRule="evenodd" />
             </svg>
@@ -45,7 +46,7 @@ const AccountModal = ({image, handleAccountModal}) => {
   <path fillRule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clipRule="evenodd" />
 </svg>
 
-            <h2 className='w-1/2 inline'>Profile</h2>
+            <Link to={'/profile/info'}><h2 className='w-1/2 inline'>Profile</h2></Link>
 
         </div>
         <div className='hover:bg-white hover:text-gray-800 px-4 w-full flex gap-3 py-2'>

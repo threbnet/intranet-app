@@ -1,0 +1,57 @@
+import { useEffect, useState } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
+
+// import InfoForm from "./components/InfoForm";
+
+const ProfileLayout = () => {
+    const location = useLocation();
+    const [activeLink, setActiveLink] = useState('');
+  
+    useEffect(() => {
+      setActiveLink(location.pathname);
+    }, [location.pathname]);
+  
+  return (
+    <div className="text-white">
+      <div className="w-full">
+        <h2 className="font-bold text-xl mb-4 inline">Profile</h2>
+        <div className="float-right">
+          <ul className="flex rounded-lg border">
+            <li className="p-3 rounded-l-lg hover:bg-white hover:text-gray-900 bg-gray-100 text-gray-900">
+              Profile
+            </li>
+            <li className="p-3 hover:bg-white hover:text-gray-900 border-r">
+              Progress
+            </li>
+            <li className="p-3 hover:bg-white hover:text-gray-900">
+              Inforgraphics
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="mt-12 h-full border-2 w-full grid grid-cols-1 lg:grid-cols-8 lg:gap-4 ">
+        <div className="w-1/8 border-r">
+          <ul className="">
+            <Link to={'info'}><li className={`border-b p-3 hover:bg-white hover:text-gray-900 ${activeLink === '/profile/info' ? 'bg-white text-gray-900' : 'hover:bg-white hover:text-gray-900'}`}>
+              Info
+            </li></Link>
+            <Link to={'courses'}><li className={`border-b p-3 hover:bg-white hover:text-gray-900 ${activeLink === '/profile/courses' ? 'bg-white text-gray-900' : 'hover:bg-white hover:text-gray-900'}`}>
+              Courses
+            </li></Link>
+            <Link to={'teams'}><li className={`border-b p-3 hover:bg-white hover:text-gray-900 ${activeLink === '/profile/teams' ? 'bg-white text-gray-900' : 'hover:bg-white hover:text-gray-900'}`}>
+              Teams
+            </li></Link>
+            <Link to={'Divison'}><li className={`border-b p-3 hover:bg-white hover:text-gray-900 ${activeLink === '/profile/division' ? 'bg-white text-gray-900' : 'hover:bg-white hover:text-gray-900'}`}>
+              Division
+            </li></Link>
+          </ul>
+        </div>
+        <div className="col-span-7 w-full  ">
+            <Outlet />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProfileLayout;
