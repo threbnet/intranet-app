@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 
 
 
-const AppLayout = () => {
+const AppLayout = () => { 
    
   return (
     <div className='bg-[#08081c] flex '>

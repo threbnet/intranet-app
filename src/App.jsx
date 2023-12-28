@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 // import "./App.css";
 import "./index.css";
-import { DashboardPage, DojoPage, LoginPage, ProfilePage, QuestDetailPage, QuestsPage } from "./pages";
+import { DashboardPage, DojoPage, LeaderboardPage, LoginPage, ProfilePage, QuestDetailPage, QuestsPage } from "./pages";
 import AppLayout from "./layouts/AppLayout";
 import ProfileLayout from "./pages/profile/layouts/ProfileLayout";
 import InfoForm from "./pages/profile/components/InfoForm";
@@ -21,6 +21,7 @@ import Submissions from "./pages/quests/components/Submissions";
 import Participants from "./pages/quests/components/Participants";
 import Handlers from "./pages/quests/components/Handlers";
 import Resources from "./pages/quests/components/Resources";
+
 
 function App() {
 
@@ -76,6 +77,13 @@ function App() {
       element: <AppLayout />,
       children: [
         {index:true, element: <DojoPage />},
+      ]
+    },
+    {
+      path:"/leaderboard",
+      element: <AppLayout />,
+      children: [
+        {index:true, element: <LeaderboardPage />},
       ]
     }
   ]);

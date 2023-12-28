@@ -31,11 +31,11 @@ const QuestsPage = () => {
         </div>
       </div>
 
-      <div className="mt-6 w-full flex justify">
-        <div className="w-1/2 pt-4 inline">
+      <div className="mt-6 w-full">
+        <div className="w-1/2 pt-4 inline-block">
             <h2 className="text-white text-lg">Available Quests</h2>
         </div>
-        <div className="items-end flex gap-4">
+        <div className="float-right flex gap-4">
            <div>
            <label className="text-white">Filter By: </label>
             <select className="p-2 rounded-lg">
@@ -66,7 +66,7 @@ const QuestsPage = () => {
            </div>
         </div>
       </div>
-      <div className="mt-8 flex flex-row flex-wrap gap-8">
+      <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {quests.map((item)=>(
                 <QuestCard quest={item} />
             ))}

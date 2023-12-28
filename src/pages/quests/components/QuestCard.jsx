@@ -3,7 +3,7 @@ import logo from "../../../assets/logo.png";
 
 const QuestCard = ({quest}) => {
   return (
-    <div className="relative rounded-lg w-[320px] border-2">
+    <div className="relative rounded-lg w-[300px] border-2">
       <div className="h-32 w-full">
         <img
           src={logo}
