@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import profile from "../../../assets/benside.jpg";
 
 const LeaderboardCard = () => {
@@ -408,9 +409,9 @@ const LeaderboardCard = () => {
                         src={profile}
                         className="rounded-lg w-8 h-8 border-2 object-fill object-center "
                       />
-                      <h2 className="whitespace-nowrap text-sm font-bold">
+                      <Link to={'/user/details/'}><h2 className="whitespace-nowrap text-sm font-bold">
                         {ranker.name}
-                      </h2>
+                      </h2></Link>
                     </div>
                     <p className="mt-2 text-xs">
                       short bio ..truncated will be displayed here
